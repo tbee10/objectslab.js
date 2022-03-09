@@ -241,7 +241,24 @@ harry.castSpell()
 */
 
 //Code Here
-
+class Phone{
+  constructor(brand, mode, storage, color, price) {
+    this.brand = brand
+    this.model = model
+    this.storage = storage
+    this.color = color
+    this.price = price
+    this.sold = false
+  }
+  sell(){
+    this.sold = true
+    console.log(`${this.brand} ${this.model} has been sold`)
+  }
+  
+changePrice(newPrice){
+  this.price = newPrice
+}
+}
   
 /*
     Next make three new phone instances using your class.
@@ -254,7 +271,9 @@ harry.castSpell()
 */
 
 //Code Here
-
+let phoneOne = new Phone('Samsung', 'Galaxy', 256, 'black', 1000)
+let phoneTwo = new Phone('Apple', 'iPhone 13', 256, 'white', 1300)
+let phoneThree = new Phone('Google', 'Pixel', 256, 'silver', 750)
 /* 
   Call the changePrice function on one of your phones, 
   don't forget to pass in a new price 
@@ -263,7 +282,9 @@ harry.castSpell()
 */ 
 
 //Code Here 
+phoneThree.changePrice(650)
 
+console.log(phoneThree)
 
 /*
   Now call the sell method on one of your other phone objects
@@ -272,7 +293,8 @@ harry.castSpell()
 */
 
 //Code Here 
-
+phoneThree.sell()
+console.log(phoneThree.sold)
 
 //////////////////////////// PROBLEM 15 ////////////////////////////
 
